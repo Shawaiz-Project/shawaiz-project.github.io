@@ -1,0 +1,29 @@
+/* PWA controls inherit the portfolio's existing visual theme. */
+[hidden] { display: none !important; }
+.pwa-actions { margin-top: 1rem; max-width: 42rem; }
+.pwa-actions details { margin-top: .6rem; font-size: .9rem; }
+.pwa-actions summary { cursor: pointer; color: var(--cyan); padding-block: .35rem; }
+.pwa-actions details p { margin-top: .5rem; }
+.pwa-actions [role="status"] { font-size: .85rem; color: var(--muted); margin-top: .5rem; }
+.pwa-button {
+  display: inline-flex; justify-content: center; align-items: center;
+  min-height: 44px; padding: .65rem 1rem; border: 1px solid var(--cyan);
+  border-radius: 10px; background: var(--cyan); color: #050711;
+  font: inherit; font-weight: 600; cursor: pointer;
+}
+.pwa-button:focus-visible, .pwa-actions summary:focus-visible {
+  outline: 3px solid var(--ink); outline-offset: 4px;
+}
+.pwa-button:disabled { opacity: .6; cursor: wait; }
+.pwa-secondary { background: transparent; color: var(--text); border-color: var(--border); }
+.pwa-update {
+  position: fixed; z-index: 100; bottom: max(1rem, env(safe-area-inset-bottom));
+  right: max(1rem, env(safe-area-inset-right)); left: 1rem; margin-left: auto;
+  max-width: 28rem; padding: 1rem; border: 1px solid var(--border-hover);
+  border-radius: var(--radius); background: var(--surface-solid); box-shadow: var(--shadow);
+  display: flex; flex-wrap: wrap; gap: .75rem;
+}
+.pwa-update p { flex-basis: 100%; }
+@media (display-mode: standalone) {
+  body { overscroll-behavior-y: contain; }
+}

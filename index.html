@@ -27,8 +27,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#0b1120">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Shawaiz Ali">
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pwa.css">
 
   <script type="application/ld+json">
   {
@@ -51,6 +54,8 @@
     ]
   }
   </script>
+  <!-- Google Links  -->
+  <meta name="google-site-verification" content="W0aioeliMJbQw_43b_pzmqnx5bvhqj8ZmugzkHHJ_o0" />
 </head>
 <body>
 
@@ -69,16 +74,26 @@
         <div class="hero__meta">
           <h1>Shawaiz Ali</h1>
           <p class="hero__role">Data Scientist &amp; AI/ML Engineer</p>
-          <p class="hero__bio">
-            I build data-mining platforms, AI/ML research systems, full-stack mobile &amp; web apps,
-            desktop POS software, education ERPs, and BI dashboards — turning real business problems
-            into production-ready, data-driven products.
+         <p class="hero__bio hero__role">
+            I’m a <strong>Data Scientist &amp; AI/ML Engineer</strong> specializing in
+            <strong>Python, Machine Learning, Deep Learning, Data Analysis, and Generative AI</strong>.
+            I build <strong>intelligent, data-driven applications and predictive solutions</strong>
+            that turn complex data into real-world impact.
           </p>
           <ul class="hero__facts">
             <li>📍 Gujranwala, Pakistan</li>
             <li>🎓 GIFT University</li>
           </ul>
-          <div class="hero__socials">
+          <div class="pwa-actions" id="pwa-actions" hidden>
+            <button class="pwa-button" id="pwa-install" type="button" hidden>Install portfolio</button>
+            <details id="pwa-help">
+              <summary>Install on your device</summary>
+              <p>Android: open in Chrome and choose <strong>Install app</strong> or <strong>Add to Home screen</strong> from the menu. On a PC, use Chrome or Edge and look for the install option in the address bar or browser menu. On iPhone or iPad, open in Safari, tap Share, then Add to Home Screen.</p>
+              <p>Options depend on your browser. Installation is optional; you can keep using this website normally.</p>
+            </details>
+            <p id="pwa-status" role="status" aria-live="polite"></p>
+          </div>
+          <div class="hero__socials hero__role">
             <a href="mailto:shawaiz.datascience@gmail.com" aria-label="Email" title="Email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             </a>
@@ -104,28 +119,38 @@
 
     <!-- ============ ABOUT ============ -->
     <section class="block reveal" id="about">
-      <p>
-        <strong>Shawaiz Ali</strong> is a <strong>Data Scientist &amp; AI/ML Engineer</strong> focused on
-        machine-learning research, end-to-end product engineering, and data-driven decision systems.
-      </p>
-      <p>
-        His work spans <strong>AI research</strong> (TopoLite-KD — topology-aware knowledge distillation for
-        COVID-19 CT classification), <strong>data-mining platforms</strong> (SmartMine — Apriori, FP-Growth,
-        ECLAT, K-Means, DBSCAN, and more), <strong>full-stack mobile apps</strong> (AgriSmart — Expo Router +
-        Node.js/PostgreSQL), <strong>education ERP</strong> (Evershine Academy — multi-campus LMS on Next.js +
-        Prisma + MySQL), <strong>desktop applications</strong> (ARCLine POS — offline Electron + SQLite +
-        Prisma), and <strong>business intelligence</strong> dashboards.
-      </p>
-      <p>
-        He works across the full stack — frontend, backend, mobile, desktop, and research code — and enjoys
-        converting real-world requirements into complete, production-ready software products.
-      </p>
-      <p>
-        His interests include data science, machine learning, deep learning, computer vision, topological
-        data analysis, retrieval-augmented generation, big data engineering, and cloud deployment.
-      </p>
-    </section>
+  <p>
+    I’m a <strong>Data Scientist &amp; AI/ML Engineer</strong> passionate about
+    transforming data into intelligent, practical, and scalable solutions.
+    I specialize in <strong>Python, Machine Learning, Deep Learning, Data Analysis,
+    SQL, and AI-powered application development</strong>.
+  </p>
 
+  <p>
+    I work across the complete <strong>Data Science and Machine Learning lifecycle</strong>,
+    from data collection, cleaning, preprocessing, EDA, and feature engineering
+    to <strong>model development, evaluation, deployment, and optimization</strong>.
+  </p>
+
+  <p>
+    My work includes <strong>Machine Learning, Deep Learning, NLP, Generative AI,
+    data mining, automation, and predictive analytics</strong>. I also build
+    interactive AI and data applications using <strong>Flask, Streamlit,
+    and modern web technologies</strong>.
+  </p>
+
+  <p>
+    I’m continuously exploring <strong>LLMs, RAG systems, Generative AI,
+    automation, and MLOps</strong> to build reliable and impactful AI solutions.
+  </p>
+
+  <p>
+    <strong>My goal is simple: turn data into intelligence, and intelligence into real-world impact.</strong>
+  </p>
+</section>
+
+
+    
     <!-- ============ LATEST UPDATES ============ -->
     <section class="block reveal" id="news">
       <h2>🔥 Latest Updates</h2>
@@ -465,6 +490,13 @@
 
   </main>
 
+  <aside class="pwa-update" id="pwa-update" aria-label="Portfolio update" hidden>
+    <p role="status">A new portfolio version is ready.</p>
+    <button class="pwa-button" id="pwa-refresh" type="button">Update now</button>
+    <button class="pwa-button pwa-secondary" id="pwa-later" type="button">Later</button>
+  </aside>
+
   <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pwa.js" defer></script>
 </body>
 </html>
